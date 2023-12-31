@@ -3,7 +3,7 @@ import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
-  className?: string
+  className?: string;
 }
 
 function NavBar({ className }: NavBarProps) {

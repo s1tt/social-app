@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'jsx-quotes': ['error', 'prefer-single'],
     'comma-dangle': ['error', 'never'],
@@ -36,7 +36,8 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'object-curly-newline': 'off'
+    'object-curly-newline': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }]
   },
   globals: {
     __IS_DEV__: true
