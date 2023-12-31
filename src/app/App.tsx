@@ -6,7 +6,7 @@ import { Sidebar } from 'widgets/Sidebar';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
-const App = () => {
+function App() {
   const { theme } = useTheme();
   return (
     <div className={classNames('app', {}, [theme])}>
@@ -19,6 +19,6 @@ const App = () => {
       </Suspense>
     </div>
   );
-};
+}
 
 export default App;

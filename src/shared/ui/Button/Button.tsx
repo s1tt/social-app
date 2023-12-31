@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react';
+import { type ButtonHTMLAttributes } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import styles from './Button.module.scss';
 
@@ -11,9 +11,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton;
 }
 
-const Button = ({ className, theme, children, ...props }: ButtonProps) => {
+function Button({ className, theme, children, ...props }: ButtonProps) {
   return (
     <button
+      type='button'
       className={classNames(styles.Button, { [styles[theme]]: true }, [
         className
       ])}
@@ -22,6 +23,6 @@ const Button = ({ className, theme, children, ...props }: ButtonProps) => {
       {children}
     </button>
   );
-};
+}
 
 export default Button;

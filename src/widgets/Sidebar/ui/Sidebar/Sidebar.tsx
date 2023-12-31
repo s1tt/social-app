@@ -8,7 +8,7 @@ interface SidebarProps {
   className?: string;
 }
 
-const Sidebar = ({ className }: SidebarProps) => {
+function Sidebar({ className }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
 
   const onToggle = () => {
@@ -21,13 +21,15 @@ const Sidebar = ({ className }: SidebarProps) => {
         className
       ])}
     >
-      <button onClick={onToggle}>toggle</button>
+      <button type='button' onClick={onToggle}>
+        toggle
+      </button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LangSwitcher className={styles.lang} />
       </div>
     </div>
   );
-};
+}
 
 export default Sidebar;

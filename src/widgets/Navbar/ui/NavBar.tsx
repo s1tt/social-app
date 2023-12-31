@@ -3,10 +3,10 @@ import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
-  className?: string;
+  className?: string
 }
 
-const NavBar = ({ className }: NavBarProps) => {
+function NavBar({ className }: NavBarProps) {
   return (
     <div className={classNames(styles.navbar, {}, [className])}>
       <div className={styles.links}>
@@ -23,6 +23,6 @@ const NavBar = ({ className }: NavBarProps) => {
       </div>
     </div>
   );
-};
+}
 
 export default NavBar;

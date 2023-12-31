@@ -4,10 +4,10 @@ import Button, { ThemeButton } from '../Button/Button';
 import styles from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
-  className?: string;
+  className?: string
 }
 
-const LangSwitcher = ({ className }: LangSwitcherProps) => {
+function LangSwitcher({ className }: LangSwitcherProps) {
   const { t, i18n } = useTranslation();
 
   const toggle = async () => {
@@ -23,6 +23,6 @@ const LangSwitcher = ({ className }: LangSwitcherProps) => {
       {t('Язык')}
     </Button>
   );
-};
+}
 
 export default LangSwitcher;
