@@ -15,6 +15,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
+    'react/jsx-wrap-multilines': 'off',
+    'arrow-body-style': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
     'comma-dangle': ['error', 'never'],
     'arrow-parens': ['error', 'as-needed'],
