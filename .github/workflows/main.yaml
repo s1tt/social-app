@@ -30,12 +30,8 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
-      - name: Save Loki Differences
       - name: Download Loki Differences
         uses: actions/download-artifact@v4
         with:
-         name: loki-differences
-         path: loki-differences
-
-
-
+          name: loki-differences
+          path: loki-differences
