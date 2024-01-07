@@ -37,6 +37,7 @@ jobs:
         if: always()
       - name: Check Loki Differences
         run: |
+         pwd
          ls -R $GITHUB_WORKSPACE/.loki/difference/
 
 
