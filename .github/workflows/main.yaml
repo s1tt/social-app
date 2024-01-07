@@ -31,13 +31,8 @@ jobs:
       - name: screenshot testing
         run: npm run test:ui:ci
       - name: Save Loki Differences
-        run: |
-          mkdir -p loki-differences
-          cp -r .loki/difference/* loki-differences
-        if: always()
-      - name: Check Loki Differences
-        run: |
-         pwd
-         ls -R $GITHUB_WORKSPACE/.loki/difference/
+      - uses: actions/download-artifact@v4
+      - name: Display structure of downloaded files
+        run: ls -R
 
 
