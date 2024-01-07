@@ -1,6 +1,8 @@
 {
   "PageError": "PageError",
   "Throw Error": "Throw Error",
+  "decrement": "decrement",
+  "increment": "increment",
   "toggle": "toggle",
   "Войти": "Войти",
   "Главная страница": "Главная страница",
