@@ -30,3 +30,8 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
+      - name: Save Loki Differences
+        run: |
+          mkdir -p loki-differences
+          cp -r .loki/difference/* loki-differences
+        if: always()
