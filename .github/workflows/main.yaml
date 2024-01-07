@@ -30,6 +30,18 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
+      - name: Save Loki Differences
+        run: |
+          mkdir -p loki-differences
+          cp -r .loki/difference/* loki-differences
+        if: always()
+
+      - name: Upload Loki Differences
+        uses: actions/upload-artifact@v2
+        with:
+          name: loki-differences
+          path: loki-differences
+
       - name: Download Loki Differences
         uses: actions/download-artifact@v4
         with:
