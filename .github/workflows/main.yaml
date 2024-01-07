@@ -36,5 +36,7 @@ jobs:
           cp -r .loki/difference/* loki-differences
         if: always()
       - name: Check Loki Differences
-        run: ls -R .loki/difference/
+        run: |
+         ls -R $GITHUB_WORKSPACE/.loki/difference/
+
 
