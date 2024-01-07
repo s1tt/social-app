@@ -34,7 +34,6 @@ jobs:
         run: |
           mkdir -p loki-differences
           cp -r .loki/difference/* loki-differences
-        if: always()
 
       - name: Upload Loki Differences
         uses: actions/upload-artifact@v2
