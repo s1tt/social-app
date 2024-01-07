@@ -34,7 +34,7 @@ function Sidebar({ className }: SidebarProps) {
         onClick={onToggle}
         className={styles.collapseBtn}
         theme={ThemeButton.BACKGROUND_INVERTED}
-        square={true}
+        square
         size={ButtonSize.L}
       >
         {collapsed ? '>' : '<'}
