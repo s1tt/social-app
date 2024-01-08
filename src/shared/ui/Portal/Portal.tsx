@@ -5,7 +5,11 @@ interface PortalProps {
   children: ReactNode;
   element?: HTMLElement;
 }
-const Portal = ({ children, element = document.body }: PortalProps) => {
+const Portal = ({
+  children,
+  element = document.getElementById('root') ??
+    document.getElementById('storybook-root')
+}: PortalProps) => {
   return createPortal(children, element);
 };
 
